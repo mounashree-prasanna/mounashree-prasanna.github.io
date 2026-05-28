@@ -310,7 +310,14 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       line-height: 1.6;
-      padding-top: 0.2rem;
+      padding: 0.2rem 0.55rem;
+      border: 1px solid #9fbe4e;
+      background: #e8f3cf;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
     }
 
     .skill-row-tags {
@@ -358,24 +365,30 @@
 
     .project-tab {
       font-family: 'DM Mono', monospace;
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
+      font-size: 0.86rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
-      background: none;
-      border: none;
-      color: var(--muted);
-      padding: 0.85rem 1.25rem;
+      background: #eef5de;
+      border: 1px solid #cfe0a7;
+      color: var(--accent);
+      padding: 0.62rem 1rem;
+      border-radius: 999px;
       cursor: pointer;
-      border-bottom: 2px solid transparent;
-      margin-bottom: -1px;
-      transition: color 0.2s, border-color 0.2s;
+      margin-bottom: 0.45rem;
+      transition: color 0.2s, border-color 0.2s, background-color 0.2s;
     }
 
-    .project-tab:hover { color: var(--text); }
+    .project-tab:hover {
+      color: var(--accent-hover);
+      background: #e5efce;
+      border-color: #b9d283;
+    }
 
     .project-tab.active {
-      color: var(--accent);
-      border-bottom-color: var(--accent);
+      color: var(--accent-hover);
+      background: #dcebb8;
+      border-color: #a9c86b;
     }
 
     .projects-grid {
@@ -749,10 +762,10 @@
       <p class="section-label">What I've built</p>
       <h2 class="section-title">Projects</h2>
       <div class="project-tabs" role="tablist" aria-label="Project categories">
-        <button type="button" class="project-tab active" role="tab" aria-selected="true" data-tab="sde">SDE</button>
-        <button type="button" class="project-tab" role="tab" aria-selected="false" data-tab="aiml">AI / ML / DL</button>
-        <button type="button" class="project-tab" role="tab" aria-selected="false" data-tab="ds">DS</button>
-        <button type="button" class="project-tab" role="tab" aria-selected="false" data-tab="de">DE</button>
+        <button type="button" class="project-tab active" role="tab" aria-selected="true" data-tab="sde">Software Engineering</button>
+        <button type="button" class="project-tab" role="tab" aria-selected="false" data-tab="aiml">AI / ML / Deep Learning</button>
+        <button type="button" class="project-tab" role="tab" aria-selected="false" data-tab="ds">Data Science</button>
+        <button type="button" class="project-tab" role="tab" aria-selected="false" data-tab="de">Data Engineering</button>
       </div>
       <div class="projects-grid" id="projects-grid">
 
