@@ -570,6 +570,63 @@
       font-size: 0.8rem;
     }
 
+    /* EDUCATION */
+    #education { background: var(--bg); }
+
+    .edu-item .exp-company { margin-bottom: 0.6rem; }
+
+    .edu-gpa {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.04em;
+    }
+
+    .coursework-heading {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .coursework-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem 2rem;
+    }
+
+    .coursework-sem h4 {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.55rem;
+      padding: 0.2rem 0.55rem;
+      border: 1px solid #9fbe4e;
+      background: #e8f3cf;
+      border-radius: 999px;
+      display: inline-block;
+    }
+
+    .coursework-list {
+      list-style: decimal;
+      padding-left: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .coursework-list li {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      padding-left: 0.2rem;
+    }
+
     /* CONTACT */
     #contact {
       text-align: center;
@@ -609,8 +666,7 @@
     /* MOBILE */
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; }
-      .nav-links { gap: 1.2rem; }
-      .nav-links li:nth-child(n+4) { display: none; }
+      .nav-links { gap: 0.65rem 1rem; flex-wrap: wrap; justify-content: flex-end; max-width: 70%; }
 
       #hero { padding: 0 1.5rem; }
       .hero-grid { grid-template-columns: 1fr; gap: 3rem; padding-top: 5rem; }
@@ -619,6 +675,8 @@
       .section-inner { padding: 4rem 1.5rem; }
 
       .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+
+      .coursework-grid { grid-template-columns: 1fr; }
 
       .skill-row {
         flex-direction: column;
@@ -641,6 +699,7 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -1150,6 +1209,75 @@
             <li>Conducted sessions on advanced technologies for students, teaching Artificial Intelligence, 2D and 3D Coding, Android App Development, and Web Development.</li>
             <li>Recognized as a punctual and supportive team member with a strong willingness to learn and implement new programs; rated "Very Good" for above-average performance.</li>
           </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-inner">
+      <p class="section-label">Academic background</p>
+      <h2 class="section-title">Education</h2>
+
+      <div class="exp-item edu-item fade-in">
+        <div class="exp-meta">
+          <div class="exp-period">Aug 2024 – May 2026</div>
+          <div class="exp-location">San Jose, CA</div>
+        </div>
+        <div>
+          <div class="exp-role">San Jose State University</div>
+          <div class="exp-company">Master of Science in Computer Science and Data</div>
+          <p class="edu-gpa">GPA: 3.8 / 4.0</p>
+
+          <p class="coursework-heading">Relevant Coursework</p>
+          <div class="coursework-grid">
+            <div class="coursework-sem">
+              <h4>Semester 1</h4>
+              <ol class="coursework-list">
+                <li>Mathematical Methods for Data Analytics</li>
+                <li>Data Visualization and Business Intelligence</li>
+                <li>Python Programming</li>
+                <li>Database Technologies</li>
+              </ol>
+            </div>
+            <div class="coursework-sem">
+              <h4>Semester 2</h4>
+              <ol class="coursework-list">
+                <li>Machine Learning Technologies</li>
+                <li>Big Data and Applications</li>
+                <li>Data Warehouse and Pipeline</li>
+              </ol>
+            </div>
+            <div class="coursework-sem">
+              <h4>Semester 3</h4>
+              <ol class="coursework-list">
+                <li>Deep Learning Technologies</li>
+                <li>Distributed Systems</li>
+              </ol>
+            </div>
+            <div class="coursework-sem">
+              <h4>Semester 4</h4>
+              <ol class="coursework-list">
+                <li>Generative Model</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item edu-item fade-in">
+        <div class="exp-meta">
+          <div class="exp-period">Aug 2018 – May 2022</div>
+          <div class="exp-location">Bengaluru, India</div>
+        </div>
+        <div>
+          <div class="exp-role">Visvesvaraya Technological University</div>
+          <div class="exp-company">Bachelor of Engineering in Electronics</div>
+          <p class="edu-gpa">GPA: 8.2 / 10.0</p>
         </div>
       </div>
 
