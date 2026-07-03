@@ -322,6 +322,7 @@
 
     .skill-row-tags {
       flex: 1;
+      min-width: 0;
       display: flex;
       flex-wrap: wrap;
       gap: 0.4rem;
@@ -680,11 +681,20 @@
 
       .skill-row {
         flex-direction: column;
+        align-items: stretch;
         gap: 0.65rem;
         padding: 1rem 0;
       }
 
-      .skill-row-label { flex: none; padding-top: 0; }
+      .skill-row-label {
+        flex: none;
+        padding-top: 0;
+        width: fit-content;
+      }
+
+      .skill-row-tags {
+        width: 100%;
+      }
 
       footer { flex-direction: column; gap: 0.5rem; text-align: center; }
     }
@@ -700,6 +710,7 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
+      <li><a href="#publications">Publications</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -730,11 +741,10 @@
         <div class="stat-card stat-card-static stat-card-roles">
           <span class="stat-label">Open to roles</span>
           <div class="role-list">
-            <span class="role-chip">Software Engineer</span>
+            <span class="role-chip">Software Engineer (Frontend & Backend) </span>
             <span class="role-chip">Data Engineer</span>
             <span class="role-chip">Data Scientist</span>
-            <span class="role-chip">AI Engineer</span>
-            <span class="role-chip">ML Engineer</span>
+            <span class="role-chip">AI/ML Engineer</span>
           </div>
         </div>
       </div>
@@ -744,7 +754,7 @@
   <hr class="divider" />
 
   <!-- SKILLS -->
-  <section id="skills">
+<section id="skills">
     <div class="section-inner">
       <p class="section-label">What I work with</p>
       <h2 class="section-title">Skills & Stack</h2>
@@ -752,61 +762,37 @@
         <div class="skill-row">
           <div class="skill-row-label">Languages</div>
           <div class="skill-row-tags tags">
-            <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">JavaScript</span><span class="tag">HTML/CSS</span>
+            <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">HTML/CSS</span><span class="tag">Bash/Shell Scripting</span>
           </div>
         </div>
         <div class="skill-row">
-          <div class="skill-row-label">Data Science</div>
+          <div class="skill-row-label">Frontend & Backend</div>
           <div class="skill-row-tags tags">
-            <span class="tag">EDA</span><span class="tag">Feature Engineering</span><span class="tag">Logistic Regression</span><span class="tag">Random Forest</span><span class="tag">XGBoost</span><span class="tag">GridSearchCV</span><span class="tag">SHAP</span>
+            <span class="tag">React</span><span class="tag">React Flow</span><span class="tag">Leaflet.js</span><span class="tag">FastAPI</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">Spring Boot</span><span class="tag">Redux Toolkit</span><span class="tag">React Router</span><span class="tag">Next.js</span><span class="tag">REST API</span><span class="tag">GraphQL</span><span class="tag">Jest</span><span class="tag">React Testing Library</span><span class="tag">pytest</span><span class="tag">JMeter</span><span class="tag">Git</span>
           </div>
         </div>
         <div class="skill-row">
-          <div class="skill-row-label">Data Engineering</div>
+          <div class="skill-row-label">Data Analytics & Data Science</div>
           <div class="skill-row-tags tags">
-            <span class="tag">Apache Airflow</span><span class="tag">Snowflake</span><span class="tag">dbt</span><span class="tag">Kafka</span><span class="tag">Redis</span><span class="tag">ChromaDB</span>
+            <span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Scikit-learn</span><span class="tag">SciPy</span><span class="tag">XGBoost</span><span class="tag">LightGBM</span><span class="tag">CatBoost</span><span class="tag">SHAP</span><span class="tag">StatsModels</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Plotly</span><span class="tag">Tableau</span><span class="tag">Power BI</span><span class="tag">Streamlit</span>
           </div>
         </div>
         <div class="skill-row">
-          <div class="skill-row-label">Cloud & Infra</div>
+          <div class="skill-row-label">Data Engineering & Cloud</div>
           <div class="skill-row-tags tags">
-            <span class="tag">AWS (S3, EC2, EKS)</span><span class="tag">Kubernetes</span><span class="tag">Apache Superset</span><span class="tag">JMeter</span>
+            <span class="tag">Apache Airflow</span><span class="tag">Apache Spark/PySpark</span><span class="tag">Snowflake</span><span class="tag">Databricks</span><span class="tag">Redshift</span><span class="tag">dbt</span><span class="tag">Kafka</span><span class="tag">Redis</span><span class="tag">MongoDB</span><span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">ChromaDB</span><span class="tag">Docker</span><span class="tag">AWS (S3, EC2, EKS)</span><span class="tag">Kubernetes</span><span class="tag">Apache Superset</span><span class="tag">GitHub Actions</span>
           </div>
         </div>
         <div class="skill-row">
-          <div class="skill-row-label">Backend & APIs</div>
+          <div class="skill-row-label">Agentic AI</div>
           <div class="skill-row-tags tags">
-            <span class="tag">FastAPI</span><span class="tag">Node.js</span><span class="tag">Microservices</span>
+            <span class="tag">OpenAI</span><span class="tag">Claude API</span><span class="tag">Mistral LLM</span><span class="tag">Multi-Agent Systems</span><span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">Function Calling</span><span class="tag">MCP</span><span class="tag">RAG</span><span class="tag">BGE</span><span class="tag">BM25</span><span class="tag">CLIP</span><span class="tag">LlamaIndex</span><span class="tag">Pinecone</span><span class="tag">HNSW</span><span class="tag">ScaNN</span><span class="tag">LSH</span><span class="tag">Annoy</span><span class="tag">HDBSCAN</span><span class="tag">Ollama</span>
           </div>
         </div>
         <div class="skill-row">
-          <div class="skill-row-label">Frontend & Viz</div>
+          <div class="skill-row-label">GenAI & Deep Learning</div>
           <div class="skill-row-tags tags">
-            <span class="tag">React</span><span class="tag">React Flow</span><span class="tag">Leaflet.js</span><span class="tag">GeoJSON</span><span class="tag">Web GIS</span>
-          </div>
-        </div>
-        <div class="skill-row">
-          <div class="skill-row-label">Gen AI & LLMs</div>
-          <div class="skill-row-tags tags">
-            <span class="tag">PyTorch</span><span class="tag">Transformers</span><span class="tag">NLP</span><span class="tag">Stable Diffusion</span><span class="tag">LoRA</span><span class="tag">QLoRA</span><span class="tag">PEFT</span><span class="tag">OpenAI</span><span class="tag">Claude API</span><span class="tag">DALL·E 3</span><span class="tag">Mistral LLM</span><span class="tag">Multi-Agent Systems</span>
-          </div>
-        </div>
-        <div class="skill-row">
-          <div class="skill-row-label">RAG</div>
-          <div class="skill-row-tags tags">
-            <span class="tag">RAG</span><span class="tag">BGE</span><span class="tag">BM25</span><span class="tag">CLIP</span>
-          </div>
-        </div>
-        <div class="skill-row">
-          <div class="skill-row-label">Computer Vision</div>
-          <div class="skill-row-tags tags">
-            <span class="tag">YOLOv8</span><span class="tag">MobileNetV2</span><span class="tag">BiLSTM</span><span class="tag">Multiple Instance Learning</span>
-          </div>
-        </div>
-        <div class="skill-row">
-          <div class="skill-row-label">Vector Search</div>
-          <div class="skill-row-tags tags">
-            <span class="tag">HNSW</span><span class="tag">ScaNN</span><span class="tag">LSH</span><span class="tag">Annoy</span><span class="tag">HDBSCAN</span>
+            <span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">Transformers</span><span class="tag">Stable Diffusion</span><span class="tag">LoRA</span><span class="tag">QLoRA</span><span class="tag">PEFT</span><span class="tag">bitsandbytes</span><span class="tag">ONNX Runtime</span><span class="tag">PyTorch Quantization</span><span class="tag">DALL·E 3</span><span class="tag">YOLOv8</span><span class="tag">MobileNetV2</span><span class="tag">BiLSTM</span><span class="tag">Multiple Instance Learning</span>
           </div>
         </div>
       </div>
@@ -1145,6 +1131,10 @@
             <li>Designed and maintained interactive web maps using HTML, CSS, JavaScript, Leaflet.js, and GeoJSON for faculty research and public-facing spatial dashboards, serving 2,000+ users.</li>
             <li>Implemented dynamic map layers, popups, and basemaps to enhance spatial data interpretation.</li>
           </ul>
+          <div class="project-tags tags" style="margin-top: 1rem; flex-direction: column; align-items: flex-start; gap: 0.5rem;">
+            <div style="font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--text-secondary);"><strong>Transit-Oriented Development Map →</strong> <a href="https://css-cappnodejmap.sjsu.edu/A-TOD/" class="project-github" style="padding-top:0;" target="_blank" rel="noopener noreferrer">Click Here</a></div>
+            <div style="font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--text-secondary);"><strong>Bike Infrastructure Map →</strong> <a href="https://css-cappnodejmap.sjsu.edu/bike-infrastructure/" class="project-github" style="padding-top:0;" target="_blank" rel="noopener noreferrer">Click Here</a></div>
+          </div>
         </div>
       </div>
 
@@ -1157,12 +1147,12 @@
           <div class="exp-role">Software Engineer</div>
           <div class="exp-company">Dish Network (EchoStar Corporation)</div>
           <ul class="exp-bullets">
-            <li>Ingested and cleaned 2M+ subscriber records across billing, viewing, and support event streams — resolving missing values, deduplicating records, and standardizing schema for downstream modeling.</li>
-            <li>Conducted EDA on subscriber behavior (watch hours, login frequency, payment history, support call volume) to surface churn-correlated signals and guide feature engineering decisions.</li>
-            <li>Engineered 30+ behavioral and demographic features including RFM metrics and rolling engagement windows, transforming raw event logs into structured model-ready inputs.</li>
-            <li>Trained and benchmarked Logistic Regression, Random Forest, and XGBoost classifiers for churn prediction, achieving AUC 0.87 and recall of 82% via GridSearchCV tuning.</li>
-            <li>Interpreted model decisions using SHAP to surface top churn drivers and presented findings to product and retention teams to inform intervention strategy.</li>
-            <li>Deployed the production-ready scoring pipeline on AWS (S3, EC2), scheduling weekly batch inference that flagged at-risk subscribers — reducing predicted churn rate by 18%.</li>
+            <li>Owned end-to-end design and delivery of 5+ production microservices in Java (Spring Boot) including notification preferences, hierarchical profile management, and customer data services integrating MongoDB and DynamoDB — reducing system errors by 35% and serving 1M+ customers with 99.9% uptime.</li>
+            <li>Led AWS MSK (Kafka) integration with Spring Boot enabling real-time event-driven processing across 10M+ daily events; engineered AWS Lambda functions triggered by Amazon EventBridge, cutting backend processing latency by 25% and eliminating 3 manual pipeline bottlenecks.</li>
+            <li>Drove zero-downtime deployment of microservices to AWS EKS via Harness CI/CD, owning infrastructure configurations across EC2 and containerized environments — improving release frequency by 40% and reducing deployment failures by 30%.</li>
+            <li>Maintained system design documentation and runbooks for all owned services to improve operational readiness, onboarding, and incident response workflows.</li>
+            <li>Embedded across cross-functional teams including frontend, QA, and DevOps in agile sprints to conduct code reviews, resolve production incidents, and troubleshoot distributed system failures.</li>
+            <li>Reduced MTTR by 35% and post-release defects by 25% through proactive debugging, production monitoring, and collaboration across distributed engineering teams.</li>
           </ul>
         </div>
       </div>
@@ -1278,6 +1268,34 @@
           <div class="exp-role">Visvesvaraya Technological University</div>
           <div class="exp-company">Bachelor of Engineering in Electronics</div>
           <p class="edu-gpa">GPA: 8.2 / 10.0</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <div class="section-inner">
+      <p class="section-label">Research</p>
+      <h2 class="section-title">Publications</h2>
+
+      <div class="exp-item fade-in">
+        <div class="exp-meta">
+          <div class="exp-period">2026</div>
+          <div class="exp-location">MTI</div>
+        </div>
+        <div>
+          <div class="exp-role">Scoring Equitable Transit: A Data-Driven Framework for Affordable TOD in California</div>
+          <div class="exp-company">Mineta Transportation Institute (MTI)</div>
+          <ul class="exp-bullets">
+            <li>Developed the interactive statewide webmap using HTML, CSS, and Leaflet.js (JavaScript), visualizing an equity scoring framework across 66,000+ transit stations built on geospatial and clustering analysis.</li>
+          </ul>
+          <div class="project-tags tags" style="margin-top: 1rem;">
+            <a href="https://transweb.sjsu.edu/research/2463-Affordable-Transit-Oriented-Development-California" class="project-github" target="_blank" rel="noopener noreferrer">Read the Publication →</a>
+          </div>
         </div>
       </div>
 
